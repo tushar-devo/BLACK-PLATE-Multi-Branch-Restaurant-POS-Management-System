@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useRestaurant } from '../../context/RestaurantContext';
 import { MenuItem, MenuItemVariant } from '../../types';
+import siteLogo from '../../image/Logo.png';
 
 interface CustomerQRSimulatorProps {
   onClose: () => void;
@@ -118,10 +119,15 @@ export const CustomerQRSimulator: React.FC<CustomerQRSimulatorProps> = ({ onClos
         <div className="flex-1 overflow-y-auto flex flex-col bg-[#141414] text-white">
           {/* Restaurant Banner */}
           <div className="p-4 bg-gradient-to-b from-[#222222] to-[#141414] border-b border-[#242424]">
-            <div className="text-[10px] uppercase font-bold tracking-widest text-[#FF0000]">
-              {currentBranch.name}
+            <div className="flex items-center gap-2.5 mb-1.5">
+              <img src={siteLogo} alt="Black Plate" className="w-8 h-8 rounded-lg object-contain bg-black/40 border border-[#333333] p-0.5" />
+              <div>
+                <div className="text-[10px] uppercase font-bold tracking-widest text-[#FF0000]">
+                  {currentBranch.name}
+                </div>
+                <h3 className="font-extrabold text-base text-white leading-tight">BLACK PLATE</h3>
+              </div>
             </div>
-            <h3 className="font-extrabold text-lg text-white">BLACK PLATE</h3>
             <div className="flex items-center justify-between text-xs text-[#A0A0A0] mt-1">
               <span>Ordering from:</span>
               <select
@@ -345,8 +351,8 @@ export const TableQRCodeModal: React.FC<{ table: any; onClose: () => void }> = (
           </button>
         </div>
 
-        <div className="w-12 h-12 rounded-2xl bg-[#FF0000]/10 text-[#FF0000] border border-[#FF0000]/30 flex items-center justify-center mx-auto mb-3">
-          <UtensilsCrossed size={22} />
+        <div className="w-14 h-14 rounded-2xl bg-[#141414] border border-[#333333] flex items-center justify-center mx-auto mb-3 p-1.5 shadow-lg">
+          <img src={siteLogo} alt="Black Plate" className="w-full h-full object-contain" />
         </div>
 
         <h3 className="font-extrabold text-base text-white">Scan & Dine QR Code</h3>

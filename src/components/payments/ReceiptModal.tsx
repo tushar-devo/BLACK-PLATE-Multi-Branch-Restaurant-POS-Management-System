@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Printer, CheckCircle2 } from 'lucide-react';
 import { Receipt } from '../../types';
+import siteLogo from '../../image/Logo.png';
 
 interface ReceiptModalProps {
   receipt: Receipt | null;
@@ -41,6 +42,11 @@ export const ReceiptModal: React.FC<ReceiptModalProps> = ({ receipt, onClose }) 
           >
             {/* Header / Brand */}
             <div className="text-center pb-3 border-b border-dashed border-gray-400">
+              <img
+                src={siteLogo}
+                alt="Black Plate"
+                className="w-12 h-12 mx-auto mb-1.5 object-contain filter grayscale contrast-200"
+              />
               <div className="font-extrabold text-base tracking-widest uppercase">
                 BLACK PLATE
               </div>

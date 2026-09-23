@@ -28,6 +28,7 @@ import {
 import { useRestaurant } from '../../context/RestaurantContext';
 import { hasPermission } from '../../utils/permissions';
 import { Role } from '../../types';
+import siteLogo from '../../image/Logo.png';
 
 interface SidebarProps {
   activeTab: string;
@@ -192,10 +193,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="p-4 border-b border-[#2A2A2A]">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3 overflow-hidden">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1E1E1E] to-[#252525] border border-[#333333] flex items-center justify-center shrink-0 shadow-lg shadow-black/50">
-              <span className="font-extrabold text-lg text-white tracking-wider">
-                <span className="text-[#FF0000]">B</span>P
-              </span>
+            <div className="w-10 h-10 rounded-xl bg-[#181818] border border-[#333333] flex items-center justify-center shrink-0 shadow-lg shadow-black/50 overflow-hidden p-1">
+              <img
+                src={siteLogo}
+                alt="Black Plate Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             {!collapsed && (
               <div className="leading-tight truncate">
