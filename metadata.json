@@ -1,0 +1,6 @@
+{
+  "name": "BLACK PLATE — Multi-Branch Restaurant POS & Management System",
+  "description": "Premium multi-branch restaurant operating system with POS, 3D interactive table management, KDS, customer QR ordering, inventory, recipes, delivery, and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
